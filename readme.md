@@ -1,17 +1,17 @@
-=VFmanglemapmask=
+#VFmanglemapmask
 This tool allows you to attempt to mangle, extract and list the heightmap and mask data in a VF bundle.
 Parameters depend on the action. 
 
-* List 		- Lists available IDs, sizes and filenames of masks and maps
-* Extract	- Extracts all the heightmaps/mask into a directory
-* Replace	- Allows the replacement of a heightmap or mask
+  * List 		- Lists available IDs, sizes and filenames of masks and maps
+  * Extract	- Extracts all the heightmaps/mask into a directory
+  * Replace	- Allows the replacement of a heightmap or mask
 
-{List} [Bundle Source]
-{Extract} [Bundle Source] [Extract-Directory]
-{Replace} [Bundle Source] [Map-ID] [Replacement-File]
+  *{List} [Bundle Source]
+  *{Extract} [Bundle Source] [Extract-Directory]
+  *{Replace} [Bundle Source] [Map-ID] [Replacement-File]
 
-=Examples=
-==List==
+#Examples
+##List
 List simply lists the internal ID, file sizes and original filenames of heightmaps/masks
     >CLmanglehmaps.py list c:\Games\CardLife\Assets\bundles\terrain_bundle\
     ID                                      Size            Original Filename
@@ -25,7 +25,7 @@ List simply lists the internal ID, file sizes and original filenames of heightma
     ac7156e0-7b70-4b48-bba0-cbd6f6f0c249    33554432        C:\CardLife\Design\World\Biome_Forest\raw\heightmap.raw
     8e1d7677-c859-41d1-9897-d995d4e8b07f    16777216        C:\CardLife\Design\World\Biome_Forest\raw\all_exported.raw
 
-==Extract==
+##Extract
 Extract extracts all the heightmaps/masks into a target directory
     >CLmanglehmaps.py extract c:\Games\CardLife\Assets\bundles\terrain_bundle\ raw
     Extracting all_exported.raw (was C:\CardLife\Design\World\Biome_Forest\raw\all_exported.raw)
@@ -38,7 +38,7 @@ Extract extracts all the heightmaps/masks into a target directory
     Extracting heightmap.raw (was C:\CardLife\Design\World\Biome_Forest\raw\heightmap.raw)
     Extracting all_exported.raw (was C:\CardLife\Design\World\Biome_Forest\raw\all_exported.raw)
 
-==Replace==
+##Replace
 Replace allows the replacement of a single file ID with another file OF IDENTICAL SIZE. Attempts to change the filesize will break the bundle.
     >CLmanglehmaps.py replace c:\Games\CardLife\Assets\bundles\terrain_bundle\ ac7156e0-7b70-4b48-bba0-cbd6f6f0c249 raw\heightmap.raw
     Just replaced heightmap.raw section with heightmap.raw file.
